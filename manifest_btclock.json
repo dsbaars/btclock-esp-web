@@ -1,0 +1,13 @@
+{
+  "name": "BTClock",
+  "version": "latest",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        { "path": "https://github.com/dsbaars/btclock_v2/releases/download/main/full-firmware.bin", "offset": 0 }
+      ]
+    }
+  ]
+}
