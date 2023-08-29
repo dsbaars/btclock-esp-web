@@ -12,7 +12,7 @@
     <style>
       body {
         font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-          Roboto, Ubuntu, sans-serif;
+          Ubuntu, sans-serif;
         padding: 0;
         margin: 0;
         line-height: 1.4;
@@ -28,13 +28,7 @@
       h3 {
         margin-top: 1.5em;
       }
-      .projects {
-        display: flex;
-        text-align: center;
-        flex-wrap: wrap;
-        gap: 24px;
-        justify-content: center;
-      }
+      
       .projects a {
         color: initial;
         text-decoration: none;
@@ -48,9 +42,7 @@
       a {
         color: #03a9f4;
       }
-      .screenshot {
-        text-align: center;
-      }
+      
       .screenshot img {
         max-width: 100%;
         box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
@@ -61,21 +53,11 @@
         margin-top: 4px;
         display: block;
       }
-      .videoWrapper {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        height: 0;
-        margin-bottom: 25px;
-        background: #ccc;
-      }
+      
       .hidden {
         display: none;
       }
-      .content pre {
-        display: block;
-        padding-left: 8px;
-        overflow-y: scroll;
-      }
+      
       .footer {
         margin-top: 24px;
         border-top: 1px solid #ccc;
@@ -86,13 +68,7 @@
         font-style: italic;
         margin-top: 16px;
       }
-      table {
-        border-spacing: 0;
-      }
-      td {
-        padding: 8px;
-        border-bottom: 1px solid #ccc;
-      }
+      
       @media (prefers-color-scheme: dark) {
         body {
           background-color: #333;
@@ -117,7 +93,7 @@
         manifest="manifest_btclock.json"
       >
         <i slot="unsupported">
-          The demo is not available because your browser does not support Web
+          The flasher is not available because your browser does not support Web
           Serial. Open this page in Google Chrome or Microsoft Edge instead<span
             class="not-supported-i hidden"
           >
@@ -126,6 +102,13 @@
         </i>
       </esp-web-install-button>
 
+      <h2>Verify, don't trust</h2>
+
+      <ul>
+        <li><a href="https://github.com/dsbaars/btclock_v2/actions/workflows/workflow.yml">GitHub action compiling the firmware</a></li>
+        <li><a href="https://github.com/dsbaars/btclock_v2/releases/tag/main">Release to be flashed</a></li>
+        <li><a href="https://github.com/dsbaars/btclock-esp-web">Source code of this website</a></li>
+      </ul>
 
       <h2>How it works</h2>
       <p>
