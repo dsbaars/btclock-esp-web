@@ -6,7 +6,7 @@
     {
       "chipFamily": "ESP32-S3",
       "parts": [
-        { "path": "https://github.com/dsbaars/btclock_v2/releases/download/main/full-firmware.bin", "offset": 0 }
+        { "path": "full-firmware.bin", "offset": 0 }
       ]
     }
   ]
