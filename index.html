@@ -110,7 +110,9 @@
     <ul>
       <li><a href="https://github.com/dsbaars/btclock_v2/actions/workflows/workflow.yml">GitHub action compiling the
           firmware</a></li>
-      <li><a href="https://github.com/dsbaars/btclock_v2/releases/tag/main">Release to be flashed</a> <code id="commitHash"></code></li>
+      <li><a href="https://github.com/dsbaars/btclock_v2/releases/tag/main">Release to be flashed</a><br>
+        <code id="commitHash"></code> / <code id="buildDate"></code>
+      </li>
       <li><a href="https://github.com/dsbaars/btclock-esp-web">Source code of this website</a></li>
     </ul>
 
@@ -159,6 +161,13 @@
       .then(response => response.text())
       .then((response) => {
         document.getElementById('commitHash').innerHTML = response;
+      })
+      .catch(err => console.log(err))
+
+    fetch("firmware/date.txt")
+      .then(response => response.text())
+      .then((response) => {
+        document.getElementById('commitHash').innerHTML = new Date(response.trim()).toLocaleString();
       })
       .catch(err => console.log(err))
   </script>
