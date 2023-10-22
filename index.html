@@ -1,154 +1,167 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>BTClock Web Tools</title>
-    <meta
-      name="description"
-      content="Easily allow users to flash new firmware for the BTClock."
-    />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="color-scheme" content="dark light" />
-    <style>
+
+<head>
+  <meta charset="utf-8" />
+  <title>BTClock Web Tools</title>
+  <meta name="description" content="Easily allow users to flash new firmware for the BTClock." />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="color-scheme" content="dark light" />
+  <style>
+    body {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+        Ubuntu, sans-serif;
+      padding: 0;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 12px;
+    }
+
+    h2 {
+      margin-top: 2em;
+    }
+
+    h3 {
+      margin-top: 1.5em;
+    }
+
+    .projects a {
+      color: initial;
+      text-decoration: none;
+    }
+
+    .project .logo img {
+      height: 50px;
+    }
+
+    .project .name {
+      margin-top: 8px;
+    }
+
+    a {
+      color: #03a9f4;
+    }
+
+    .screenshot img {
+      max-width: 100%;
+      box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+        rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      border-radius: 4px;
+    }
+
+    .screenshot i {
+      margin-top: 4px;
+      display: block;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .footer {
+      margin-top: 24px;
+      border-top: 1px solid #ccc;
+      padding-top: 24px;
+      text-align: center;
+    }
+
+    .footer .initiative {
+      font-style: italic;
+      margin-top: 16px;
+    }
+
+    @media (prefers-color-scheme: dark) {
       body {
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-          Ubuntu, sans-serif;
-        padding: 0;
-        margin: 0;
-        line-height: 1.4;
+        background-color: #333;
+        color: #fff;
       }
-      .content {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 12px;
-      }
-      h2 {
-        margin-top: 2em;
-      }
-      h3 {
-        margin-top: 1.5em;
-      }
-      
-      .projects a {
-        color: initial;
-        text-decoration: none;
-      }
-      .project .logo img {
-        height: 50px;
-      }
-      .project .name {
-        margin-top: 8px;
-      }
+
       a {
-        color: #03a9f4;
+        color: #58a6ff;
       }
-      
-      .screenshot img {
-        max-width: 100%;
-        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
-          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
-        border-radius: 4px;
-      }
-      .screenshot i {
-        margin-top: 4px;
-        display: block;
-      }
-      
-      .hidden {
-        display: none;
-      }
-      
-      .footer {
-        margin-top: 24px;
-        border-top: 1px solid #ccc;
-        padding-top: 24px;
-        text-align: center;
-      }
-      .footer .initiative {
-        font-style: italic;
-        margin-top: 16px;
-      }
-      
-      @media (prefers-color-scheme: dark) {
-        body {
-          background-color: #333;
-          color: #fff;
-        }
-        a {
-          color: #58a6ff;
-        }
-      }
-    </style>
-    <script module>
-      import(
-          "https://unpkg.com/esp-web-tools/dist/web/install-button.js?module"
-      );
-    </script>
-  </head>
-  <body>
-    <div class="content">
-      <h1>BTClock Web Installer</h1>
-      
-      <esp-web-install-button
-        manifest="manifest_btclock.json"
-      >
-        <i slot="unsupported">
-          The flasher is not available because your browser does not support Web
-          Serial. Open this page in Google Chrome or Microsoft Edge instead<span
-            class="not-supported-i hidden"
-          >
-            (but not on your iOS device)</span
-          >.
-        </i>
-      </esp-web-install-button>
+    }
+  </style>
+  <script module>
+    import(
+      "https://unpkg.com/esp-web-tools/dist/web/install-button.js?module"
+    );
+  </script>
+</head>
 
-      <h2>Verify, don't trust</h2>
+<body>
+  <div class="content">
+    <h1>BTClock Web Installer</h1>
 
-      <ul>
-        <li><a href="https://github.com/dsbaars/btclock_v2/actions/workflows/workflow.yml">GitHub action compiling the firmware</a></li>
-        <li><a href="https://github.com/dsbaars/btclock_v2/releases/tag/main">Release to be flashed</a></li>
-        <li><a href="https://github.com/dsbaars/btclock-esp-web">Source code of this website</a></li>
-      </ul>
+    <esp-web-install-button manifest="manifest_btclock.json">
+      <i slot="unsupported">
+        The flasher is not available because your browser does not support Web
+        Serial. Open this page in Google Chrome or Microsoft Edge instead<span class="not-supported-i hidden">
+          (but not on your iOS device)</span>.
+      </i>
+    </esp-web-install-button>
 
-      <p>The first time you have to put the S3 mini in to boot mode: Press both side buttons at the same time (RST/BOOT), then first release the RST button and then the boot button.</p>
+    <h2>Verify, don't trust</h2>
 
-      <p>
-        If this website does not work, you can download <code>full-firmware.bin</code> from the releases page and use <a href="https://web.esphome.io/">ESPHome Web Flasher</a> to flash it instead.
-      </p>
+    <ul>
+      <li><a href="https://github.com/dsbaars/btclock_v2/actions/workflows/workflow.yml">GitHub action compiling the
+          firmware</a></li>
+      <li><a href="https://github.com/dsbaars/btclock_v2/releases/tag/main">Release to be flashed</a> <code id="commitHash"></code></li>
+      <li><a href="https://github.com/dsbaars/btclock-esp-web">Source code of this website</a></li>
+    </ul>
 
-      <h2>How it works</h2>
-      <p>
-        ESP Web Tools works by using
-        <a href="https://developer.mozilla.org/docs/Web/API/Web_Serial_API"
-          >Web Serial</a> and a manifest which describes the firmware. ESP Web Tools detects the
-        chipset of the connected ESP device and automatically selects the right
-        firmware variant from the manifest.
-      </p>
-      <p>
-        Web Serial is available in Google Chrome and Microsoft Edge
-        browsers<span class="not-supported-i hidden">
-          (but not on your iOS device)</span
-        >. Android support should be possible but has not been implemented yet.
-      </p>
+    <p>The first time you have to put the S3 mini in to boot mode: Press both side buttons at the same time (RST/BOOT),
+      then first release the RST button and then the boot button.</p>
+
+    <p>
+      If this website does not work, you can download <code>full-firmware.bin</code> from the releases page and use <a
+        href="https://web.esphome.io/">ESPHome Web Flasher</a> to flash it instead.
+    </p>
+
+    <h2>How it works</h2>
+    <p>
+      ESP Web Tools works by using
+      <a href="https://developer.mozilla.org/docs/Web/API/Web_Serial_API">Web Serial</a> and a manifest which describes
+      the firmware. ESP Web Tools detects the
+      chipset of the connected ESP device and automatically selects the right
+      firmware variant from the manifest.
+    </p>
+    <p>
+      Web Serial is available in Google Chrome and Microsoft Edge
+      browsers<span class="not-supported-i hidden">
+        (but not on your iOS device)</span>. Android support should be possible but has not been implemented yet.
+    </p>
 
 
-      <div class="footer">
-        <div class="initiative">
-          ESP Web Tools is a project by
-          <a href="https://esphome.io">ESPHome</a>.<br />
-          Development is funded by
-          <a href="https://www.nabucasa.com">Nabu Casa</a>.
-        </div>
-        <div>
-          ESP Web Tools is
-          <a href="https://github.com/esphome/esp-web-tools">open source</a>.
-        </div>
+    <div class="footer">
+      <div class="initiative">
+        ESP Web Tools is a project by
+        <a href="https://esphome.io">ESPHome</a>.<br />
+        Development is funded by
+        <a href="https://www.nabucasa.com">Nabu Casa</a>.
+      </div>
+      <div>
+        ESP Web Tools is
+        <a href="https://github.com/esphome/esp-web-tools">open source</a>.
       </div>
     </div>
-    <script>
-      if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-        document.querySelector(".not-supported-i").classList.remove("hidden");
-      }
-    </script>
-  </body>
+  </div>
+  <script>
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+      document.querySelector(".not-supported-i").classList.remove("hidden");
+    }
+
+    fetch("firmware/commit.txt")
+      .then(response => response.text())
+      .then((response) => {
+        document.getElementById('commitHash').innerHTML = response;
+      })
+      .catch(err => console.log(err))
+  </script>
+</body>
+
 </html>
