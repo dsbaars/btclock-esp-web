@@ -1,0 +1,13 @@
+{
+  "name": "BTClock",
+  "version": "V3",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        { "path": "firmware_v3/full-firmware.bin", "offset": 0 }
+      ]
+    }
+  ]
+}

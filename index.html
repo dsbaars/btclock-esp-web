@@ -96,7 +96,7 @@
 <body>
   <div class="content">
     <h1>BTClock Web Installer</h1>
-
+    <h2>Version 2</h2>
     <esp-web-install-button manifest="manifest_btclock.json">
       <i slot="unsupported">
         The flasher is not available because your browser does not support Web
@@ -104,8 +104,7 @@
           (but not on your iOS device)</span>.
       </i>
     </esp-web-install-button>
-
-    <h2>Verify, don't trust</h2>
+    <h3>Verify, don't trust</h2>
 
     <ul>
       <li><a href="https://github.com/dsbaars/btclock_v2/actions/workflows/workflow.yml">GitHub action compiling the
@@ -115,6 +114,19 @@
       </li>
       <li><a href="https://github.com/dsbaars/btclock-esp-web">Source code of this website</a></li>
     </ul>
+    <hr>
+    <h2>Version 3 (experimental)</h2>
+    <esp-web-install-button manifest="manifest_btclock_v3.json">
+      <i slot="unsupported">
+        The flasher is not available because your browser does not support Web
+        Serial. Open this page in Google Chrome or Microsoft Edge instead<span class="not-supported-i hidden">
+          (but not on your iOS device)</span>.
+      </i>
+      <slot name="activate">Install using multiple parts</slot>
+    </esp-web-install-button>
+    <p>Note that for V3 you have to use the "Connect to Wi-Fi" button after flashing in the web interface, the QR code setup path is not implemented.</p>
+    <p><a href="https://github.com/btclock/btclock_v3">V3 GitHub</a></p>
+    <hr>
 
     <p>The first time you have to put the S3 mini in to boot mode: Press both side buttons at the same time (RST/BOOT),
       then first release the RST button and then the boot button.</p>
