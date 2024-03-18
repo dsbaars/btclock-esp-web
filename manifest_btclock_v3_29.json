@@ -1,0 +1,17 @@
+{
+  "name": "BTClock",
+  "version": "V3",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        { "path": "firmware_v3/build-lolin_s3_mini-29epd/bootloader.bin", "offset": "0" },
+        { "path": "firmware_v3/build-lolin_s3_mini-29epd/partitions.bin", "offset": "32768" },
+        { "path": "firmware_v3/build-lolin_s3_mini-29epd/ota_data_initial.bin", "offset": "57344" },
+        { "path": "firmware_v3/build-lolin_s3_mini-29epd/firmware.bin", "offset": "65536" },
+        { "path": "firmware_v3/build-lolin_s3_mini-29epd/littlefs.bin", "offset": "3575808" }
+      ]
+    }
+  ]
+}
