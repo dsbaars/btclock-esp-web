@@ -9,7 +9,7 @@
         { "path": "firmware_v3/build-lolin_s3_mini-213epd/bootloader.bin", "offset": "0" },
         { "path": "firmware_v3/build-lolin_s3_mini-213epd/partitions.bin", "offset": "32768" },
         { "path": "firmware_v3/build-lolin_s3_mini-213epd/ota_data_initial.bin", "offset": "57344" },
-        { "path": "firmware_v3/build-lolin_s3_mini-213epd/lolin_s3_mini-213epd_firmware.bin", "offset": "65536" },
+        { "path": "firmware_v3/build-lolin_s3_mini-213epd/lolin_s3_mini_213epd_firmware.bin", "offset": "65536" },
         { "path": "firmware_v3/build-lolin_s3_mini-213epd/littlefs.bin", "offset": "3575808" }
       ]
     }
